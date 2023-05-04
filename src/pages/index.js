@@ -26,12 +26,12 @@ export default function Home() {
           <MainPageSlider data={[]}></MainPageSlider>
           <InfoSection></InfoSection>
           <WeCare></WeCare>
-          <Certifications data={[]}></Certifications>
           <Features></Features>
+          <Certifications data={[]}></Certifications>
           <Smile></Smile>
           <Department></Department>
           <OurDentists></OurDentists>
-          <Contact></Contact>
+          {/*<Contact></Contact>*/}
           <Blogs></Blogs>
       </main>
     </>

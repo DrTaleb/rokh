@@ -1,10 +1,10 @@
-import TitleSection from "@/components/public/contactus/TitleSection";
+import ContactusSection from "@/components/public/contactus/ContactusSection";
 
 export default function Contactus(){
 
 
 
     return(
-        <TitleSection></TitleSection>
+        <ContactusSection></ContactusSection>
     )
 }

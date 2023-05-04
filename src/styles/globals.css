@@ -1,468 +1,552 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
 @font-face {
-  font-family: "Vazirmatn";
-  src: url("../fonts/webfonts/Vazirmatn[wght].woff2") format("woff2 supports variations"), url("../fonts/webfonts/Vazirmatn[wght].woff2") format("woff2-variations");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Vazirmatn";
+    src: url("../fonts/webfonts/Vazirmatn[wght].woff2") format("woff2 supports variations"), url("../fonts/webfonts/Vazirmatn[wght].woff2") format("woff2-variations");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
 }
+
 body,
 html {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  position: relative;
+    position: relative;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  direction: rtl;
-  font-family: "Vazirmatn";
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: "Vazirmatn";
+    box-sizing: border-box;
 }
 
 ul,
 li,
 a {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.mt-custom {
+    margin-top: 250px;
 }
 
 .reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 1s all ease;
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
 }
 
 .reveal.active-r {
-  transform: translateY(0);
-  opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
+}
+.bg-main-red{
+    background-color: #933943 !important;
+}
+.bg-main-yellow{
+    background-color: #E0B96B !important;
+}
+.text-main-red{
+    color: #933943 !important;
+}
+.text-main-yellow{
+    color: #E0B96B !important;
+}
+#topBtn a {
+    position: fixed;
+    bottom: -100px;
+    right: 30px;
+    font-size: 60px;
+    transition: all 0.3s ease;
+    color: #202c45;
+    z-index: 101;
 }
 
-#topBtn a {
-  position: fixed;
-  bottom: -100px;
-  right: 30px;
-  font-size: 60px;
-  transition: all 0.3s ease;
-  color: #202c45;
-  z-index: 101;
-}
 #topBtn a:hover {
-  color: #1196CC;
+    color: #1196CC;
 }
 
 #title {
-  background-color: #202c45;
+    background-color: #202c45;
 }
+
 #title .titleContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 70%;
-  margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70%;
+    margin: auto;
 }
+
 #title .titleContainer .contact {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
 }
+
 #title .titleContainer .contact .items {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
-  padding: 10px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    padding: 10px;
 }
+
 #title .titleContainer .contact .items img {
-  width: 20px;
-  filter: invert(100%);
+    width: 20px;
+    filter: invert(100%);
 }
+
 #title .titleContainer .contact .items p {
-  color: #fff;
-  padding: 0 10px;
-  margin: 0;
+    color: #fff;
+    padding: 0 10px;
+    margin: 0;
 }
+
 #title .titleContainer .social {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
 }
+
 #title .titleContainer .social .appoint a {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  background-color: #1196CC;
-  padding: 20px 60px;
-  font-size: 20px;
-  border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1196CC;
+    padding: 20px 60px;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
 #navigation {
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
+
 #navigation .search-box {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: #fff;
-  z-index: 100;
-  text-align: center;
-  height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 100;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
 }
+
 #navigation .search-box img {
-  width: 25px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  filter: invert(70%);
-  transition: all 0.5s ease;
+    width: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    filter: invert(70%);
+    transition: all 0.5s ease;
 }
+
 #navigation .search-box img:hover {
-  filter: invert(0%);
+    filter: invert(0%);
 }
+
 #navigation .search-box input {
-  padding: 30px;
-  width: 100%;
-  text-align: center;
-  font-size: 30px;
-  border: none;
-  outline: none;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    border: none;
+    outline: none;
 }
+
 #navigation .navContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 70%;
-  margin: auto;
-  padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70%;
+    margin: auto;
+    padding: 20px 0;
 }
+
 #navigation .navContainer .nav {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
 }
+
 #navigation .navContainer .nav .bars {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
 }
+
 #navigation .navContainer .nav .bars .searchBar {
-  padding: 10px 10px 0 10px;
+    padding: 10px 10px 0 10px;
 }
+
 #navigation .navContainer .nav .bars .searchBar img {
-  width: 30px;
-  vertical-align: baseline;
+    width: 30px;
+    vertical-align: baseline;
 }
+
 #navigation .navContainer .nav .bars .barBtn {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: none;
 }
+
 #navigation .navContainer .nav .nav-ul {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
-  transition: height 0.5s;
-  margin: 0;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    transition: height 0.5s;
+    margin: 0;
 }
+
 #navigation .navContainer .nav .nav-ul li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: all 0.5s ease;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease;
 }
+
 #navigation .navContainer .nav .nav-ul li a {
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  margin: 0;
-  font-size: 15px;
-  padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    font-size: 15px;
+    padding: 10px 20px;
 }
+
 #navigation .navContainer .nav .nav-ul li .active-a, #navigation .navContainer .nav .nav-ul li :hover {
-  background-color: #202c45;
-  border-radius: 30px;
-  color: #fff;
+    background-color: #202c45;
+    border-radius: 30px;
+    color: #fff;
 }
+
 #navigation .navContainer .logo {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
+
 #navigation .navContainer .logo img {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 
 .sliderContainer {
-  position: relative;
+    position: relative;
 }
 
 #info {
-  position: relative;
-  z-index: 10;
+    position: relative;
+    z-index: 10;
 
 }
+
 #info .info {
-  position: absolute;
-  top: -150px;
+    position: absolute;
+    top: -150px;
 }
+
 #info .info .rowInfo {
-  max-width: 80%;
-  margin: auto;
+    max-width: 80%;
+    margin: auto;
 }
+
 #info .info .rowInfo .topDoc {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 40px;
-  background-color: #202c45;
-  color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #833943;
+    color: #fff;
 }
+
 #info .info .rowInfo .topDoc p.bodyText {
-  margin-top: 20px;
+    margin-top: 20px;
 }
+
 #info .info .rowInfo .topDoc button {
-  background-color: #202c45;
-  color: #fff;
-  padding: 10px 30px;
-  border: 3px solid #fff;
-  border-radius: 30px;
-  margin-top: 30px;
-  transition: all 0.5s ease;
-  font-size: 20px;
+    background-color: #833943;
+    color: #fff;
+    padding: 10px 30px;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    margin-top: 30px;
+    transition: all 0.5s ease;
+    font-size: 20px;
 }
+
 #info .info .rowInfo .topDoc button:hover {
-  background-color: #fff;
-  color: black;
-  box-shadow: 0 0 20px 3px #fff;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 20px 3px #fff;
 }
+
 #info .info .rowInfo .wt {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  background-color: #1196CC;
-  color: #fff;
-  padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #E0B96B;
+    color: #fff;
+    padding: 40px;
 }
+
 #info .info .rowInfo .wt .workOut {
-  margin-top: 30px;
-  width: 100%;
+    margin-top: 30px;
+    width: 100%;
 }
+
 #info .info .rowInfo .wt .workOut .workItems {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 #info .info .rowInfo .wt button {
-  padding: 10px 30px;
-  background-color: transparent;
-  border: 3px solid #fff;
-  border-radius: 30px;
-  margin-top: 23px;
-  color: #fff;
-  transition: all 0.5s ease;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    margin-top: 23px;
+    color: #fff;
+    transition: all 0.5s ease;
 }
+
 #info .info .rowInfo .wt button:hover {
-  background-color: #fff;
-  color: black;
-  box-shadow: 0 0 20px 3px #fff;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 20px 3px #fff;
 }
+
 #info .info .rowInfo .service {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 40px;
-  color: #fff;
-  background-color: #202c45;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px;
+    color: #fff;
+    background-color: #833943;
 }
+
 #info .info .rowInfo .service button {
-  background-color: #202c45;
-  color: #fff;
-  padding: 10px 30px;
-  border: 3px solid #fff;
-  border-radius: 30px;
-  margin-top: 30px;
-  transition: all 0.5s ease;
+    background-color: #833943;
+    color: #fff;
+    padding: 10px 30px;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    margin-top: 30px;
+    transition: all 0.5s ease;
 }
+
 #info .info .rowInfo .service button:hover {
-  background-color: #fff;
-  color: black;
-  box-shadow: 0 0 20px 3px #fff;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 20px 3px #fff;
 }
+
 #info .info .rowInfo .contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 40px;
-  color: #fff;
-  background-color: #1196CC;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px;
+    color: #fff;
+    background-color: #E0B96B;
 }
+
 #info .info .rowInfo .contact button {
-  padding: 10px 30px;
-  background-color: transparent;
-  border: 3px solid #fff;
-  border-radius: 30px;
-  margin-top: 10px;
-  color: #fff;
-  transition: all 0.5s ease;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    margin-top: 10px;
+    color: #fff;
+    transition: all 0.5s ease;
 }
+
 #info .info .rowInfo .contact button:hover {
-  background-color: #fff;
-  color: black;
-  box-shadow: 0 0 20px 3px #fff;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 20px 3px #fff;
 }
 
 #weCare .weCareContainer {
-  margin-top: 300px;
-  margin-bottom: 100px;
+    margin-top: 300px;
+    margin-bottom: 100px;
 }
+
 #weCare .weCareContainer .weCareContent {
-  max-width: 70%;
-  margin: auto;
+    max-width: 70%;
+    margin: auto;
 }
+
 #weCare .weCareContainer .weCareContent .weCareImg {
-  padding: 0;
-  width: 35%;
-  background-color: yellow;
+    padding: 0;
+    width: 35%;
+    background-color: yellow;
 }
+
 #weCare .weCareContainer .weCareContent .weCareImg img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
+
 #weCare .weCareContainer .weCareContent .weCareText {
-  width: 65%;
-  padding-right: 30px;
+    width: 65%;
+    padding-right: 30px;
 }
+
 #weCare .weCareContainer .weCareContent .weCareText p {
-  font-size: 20px;
-  padding: 20px 0;
+    font-size: 20px;
+    padding: 20px 0;
 }
+
 #weCare .weCareContainer .weCareContent .weCareText .hologram img {
-  width: 80px;
-  margin: 0 10px;
+    width: 80px;
+    margin: 0 10px;
 }
+
 #weCare .weCareContainer .weCareContent .weCareText button {
-  border: none;
-  margin-top: 30px;
-  padding: 15px 30px;
-  border-radius: 30px;
-  background-color: #202c45;
-  color: #fff;
-  font-size: 20px;
-  transition: all 0.5s ease;
+    border: none;
+    margin-top: 30px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: #202c45;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.5s ease;
 }
+
 #weCare .weCareContainer .weCareContent .weCareText button:hover {
-  background-color: #1196CC;
+    background-color: #1196CC;
 }
 
 #certificate {
-  background-color: #eee;
-  padding: 80px 0;
+    background-color: #eee;
+    padding: 80px 0;
 }
+
 #certificate .cerSwiper {
-  max-width: 70%;
-  margin: auto;
+    max-width: 70%;
+    margin: auto;
 }
 
 .swiper {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .swiper {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #service {
-  padding: 100px 0;
+    padding: 100px 0;
 }
+
 #service .serviceContainer {
-  max-width: 70%;
-  margin: auto;
+    max-width: 70%;
+    margin: auto;
 }
+
 #service .serviceContainer .serviceTitle {
-  text-align: center;
+    text-align: center;
 }
+
 #service .serviceContainer .serviceTitle img {
-  padding: 10px;
+    padding: 10px;
 }
+
 #service .serviceContainer .serviceTitle p {
-  color: gray;
-  font-size: 20px;
+    color: gray;
+    font-size: 20px;
 }
+
 #service .serviceContainer .serviceContent {
-  margin: 70px 0;
+    margin: 70px 0;
 }
+
 #service .serviceContainer .serviceContent .servItems {
-  display: flex;
-  justify-content: stretch;
-  align-items: flex-start;
-  padding: 40px;
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+    padding: 40px;
 }
+
 #service .serviceContainer .serviceContent .servItems:hover .servIcon {
-  transform: rotateY(180deg);
-  transition: all 0.5s ease;
+    transform: rotateY(180deg);
+    transition: all 0.5s ease;
 }
+
 #service .serviceContainer .serviceContent .servItems .servIcon {
-  width: 70px;
-  height: 70px;
-  padding: 15px;
-  transition: all 0.5s ease;
-  border-radius: 50%;
-  background-color: #1196CC;
-  text-align: center;
+    width: 70px;
+    height: 70px;
+    padding: 15px;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    background-color: #1196CC;
+    text-align: center;
 }
+
 #service .serviceContainer .serviceContent .servItems .servIcon img {
-  width: 100%;
+    width: 100%;
 }
+
 #service .serviceContainer .serviceContent .servItems .servText {
-  width: 85%;
-  padding-right: 20px;
-  padding-top: 10px;
+    width: 85%;
+    padding-right: 20px;
+    padding-top: 10px;
 }
+
 #service .serviceContainer .serviceContent .servItems .servText p {
-  margin-top: 15px;
-  color: gray;
-  text-align: justify;
-  font-size: 18px;
+    margin-top: 15px;
+    color: gray;
+    text-align: justify;
+    font-size: 18px;
 }
 
 /*#smile {*/
@@ -473,1172 +557,1587 @@ a {
 /*  background-attachment: fixed;*/
 /*}*/
 #smile .smileContainer {
-  text-align: center;
-  padding: 150px 0;
-  background-color: rgba(32, 44, 69, 0.8431372549);
-  margin: auto;
+    text-align: center;
+    padding: 150px 0;
+    background-color: rgba(32, 44, 69, 0.8431372549);
+    margin: auto;
 }
+
 #smile .smileContainer .smileContent {
-  max-width: 70%;
-  margin: auto;
+    max-width: 70%;
+    margin: auto;
 }
+
 #smile .smileContainer .smileContent .rowItems {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
+
 #smile .smileContainer .smileContent .rowItems img {
-  width: 70px;
-  filter: invert(100%);
+    width: 70px;
+    filter: invert(100%);
 }
+
 #smile .smileContainer .smileContent .rowItems h2 {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 #depertment {
-  background-color: #f8f8f8;
-  padding: 100px 0;
+    background-color: #f8f8f8;
+    padding: 100px 0;
 }
+
 #depertment .depContainer {
-  max-width: 70%;
-  margin: auto;
+    max-width: 70%;
+    margin: auto;
 }
+
 #depertment .depContainer .depTitle {
-  text-align: center;
+    text-align: center;
 }
+
 #depertment .depContainer .depTitle img {
-  padding: 10px;
+    padding: 10px;
 }
+
 #depertment .depContainer .depTitle p {
-  color: gray;
-  font-size: 20px;
-  text-align: center;
+    color: gray;
+    font-size: 20px;
+    text-align: center;
 }
+
 #depertment .depContainer .depContent {
-  margin-top: 50px;
+    margin-top: 50px;
 }
+
 #depertment .depContainer .depContent .depRow {
-  padding: 20px;
-  background-color: #fff;
-  margin: 15px;
-  width: calc(33.33% - 30px);
+    padding: 20px;
+    background-color: #fff;
+    margin: 15px;
+    width: calc(33.33% - 30px);
 }
+
 #depertment .depContainer .depContent .depRow .depItems {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 #depertment .depContainer .depContent .depRow .depItems:hover .hoverBox {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 #depertment .depContainer .depContent .depRow .depItems div {
-  position: relative;
+    position: relative;
 }
+
 #depertment .depContainer .depContent .depRow .depItems div img {
-  width: 100%;
-  border-radius: 15px;
+    width: 100%;
+    border-radius: 15px;
 }
+
 #depertment .depContainer .depContent .depRow .depItems div .hoverBox {
-  border-radius: 15px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(32, 44, 69, 0.662745098);
-  position: absolute;
-  top: 0;
-  transition: all 1s ease;
-  cursor: pointer;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 44, 69, 0.662745098);
+    position: absolute;
+    top: 0;
+    transition: all 1s ease;
+    cursor: pointer;
 }
+
 #depertment .depContainer .depContent .depRow .depItems h4 {
-  padding: 10px 0;
+    padding: 10px 0;
 }
+
 #depertment .depContainer .depContent .depRow .depItems p {
-  color: gray;
+    color: gray;
 }
+
 #depertment .depContainer .depContent .depRow .depItems button {
-  padding: 15px 30px;
-  border-radius: 10px;
-  border: none;
-  background-color: #202c45;
-  color: #fff;
-  transition: all 0.5s ease;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #202c45;
+    color: #fff;
+    transition: all 0.5s ease;
 }
+
 #depertment .depContainer .depContent .depRow .depItems button:hover {
-  background-color: #1196CC;
+    background-color: #1196CC;
 }
 
 #dentist {
-  padding: 100px 0;
+    padding: 100px 0;
 }
+
 #dentist .dentistContainer {
-  max-width: 70%;
-  margin: auto;
+    max-width: 70%;
+    margin: auto;
 }
+
 #dentist .dentistContainer .dentistTitle {
-  text-align: center;
+    text-align: center;
 }
+
 #dentist .dentistContainer .dentistTitle img {
-  padding: 10px;
+    padding: 10px;
 }
+
 #dentist .dentistContainer .dentistTitle p {
-  color: gray;
-  font-size: 20px;
+    color: gray;
+    font-size: 20px;
 }
+
 #dentist .dentistContainer .dentistContent {
-  margin-top: 50px;
+    margin-top: 50px;
 }
+
 #dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide {
-  background-color: #eee;
-  cursor: pointer;
+    background-color: #eee;
+    cursor: pointer;
 }
+
 #dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide:hover .dentBox {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 #dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide div {
-  position: relative;
+    position: relative;
 }
+
 #dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide div .dentBox {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background-color: rgba(32, 44, 69, 0.662745098);
-  transition: all 1s ease;
-  cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(32, 44, 69, 0.662745098);
+    transition: all 1s ease;
+    cursor: pointer;
 }
+
 #dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide h4 {
-  margin-top: 15px;
+    margin-top: 15px;
 }
+
 #dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide p {
-  color: #1196CC;
-  font-size: 14px;
+    color: #1196CC;
+    font-size: 14px;
 }
+
 #dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide .dent-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
 }
+
 #dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide .dent-social img {
-  width: 30px;
-  margin: 8px;
+    width: 30px;
+    margin: 8px;
 }
+
 .dentistSlide {
-  background-color: #FFFFFF;
-  cursor: pointer;
-  box-shadow: 0 0 10px #d2d5d9;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 0 0 10px #d2d5d9;
 }
+
 .dentistSlide:hover .dentBox {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 .dentistSlide div {
-  position: relative;
+    position: relative;
 }
+
 .dentistSlide div .dentBox {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background-color: rgba(32, 44, 69, 0.662745098);
-  transition: all 1s ease;
-  cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(32, 44, 69, 0.662745098);
+    transition: all 1s ease;
+    cursor: pointer;
 }
+
 .dentistSlide h4 {
-  margin-top: 15px;
+    margin-top: 15px;
 }
+
 .dentistSlide p {
-  color: #1196CC;
-  font-size: 14px;
+    color: #1196CC;
+    font-size: 14px;
 }
+
 .dentistSlide .dent-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
 }
+
 .dentistSlide .dent-social img {
-  width: 30px;
-  margin: 8px;
+    width: 30px;
+    margin: 8px;
 }
 
 #price {
-  background-color: #f8f8f8;
-  padding: 100px 0;
+    background-color: #f8f8f8;
+    padding: 100px 0;
 }
+
 #price .priceContainer {
-  max-width: 70%;
-  margin: auto;
+    max-width: 70%;
+    margin: auto;
 }
+
 #price .priceContainer .priceItems {
-  text-align: center;
+    text-align: center;
 }
+
 #price .priceContainer .priceItems img {
-  padding: 10px;
+    padding: 10px;
 }
+
 #price .priceContainer .priceItems p {
-  color: gray;
-  font-size: 20px;
+    color: gray;
+    font-size: 20px;
 }
+
 #price .priceContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 #price .priceContent .price-rowItems {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid #1196CC;
-  width: calc(33.33% - 40px);
-  margin: 20px;
-  flex-direction: column;
-  padding: 40px;
-  background-color: #fff;
-  transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #1196CC;
+    width: calc(33.33% - 40px);
+    margin: 20px;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #fff;
+    transition: all 0.5s ease;
 }
+
 #price .priceContent .price-rowItems .priceIcons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1196CC;
-  width: 80px;
-  height: 80px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1196CC;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
+
 #price .priceContent .price-rowItems .priceIcons img {
-  width: 100%;
+    width: 100%;
 }
+
 #price .priceContent .price-rowItems h3 {
-  margin: 10px;
+    margin: 10px;
 }
+
 #price .priceContent .price-rowItems h2 {
-  margin: 20px;
-  font-weight: bold;
+    margin: 20px;
+    font-weight: bold;
 }
+
 #price .priceContent .price-rowItems p.bodyText {
-  color: gray;
-  margin: 10px 0 20px 0;
-  text-align: justify;
-  font-size: 16px;
+    color: gray;
+    margin: 10px 0 20px 0;
+    text-align: justify;
+    font-size: 16px;
 }
+
 #price .priceContent .price-rowItems button {
-  padding: 10px 70px;
-  border: none;
-  background-color: #1196CC;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 15px;
-  margin: 40px 0 0 20px;
+    padding: 10px 70px;
+    border: none;
+    background-color: #1196CC;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 15px;
+    margin: 40px 0 0 20px;
 }
+
 #price .priceContent .price-rowItems:hover {
-  transform: translateY(-20px);
+    transform: translateY(-20px);
 }
 
 #contact {
-  /*background-image: url("../img/smile.jpg");*/
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+    /*background-image: url("../img/smile.jpg");*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 #contact .conactContainer {
-  background-color: rgba(32, 44, 69, 0.8431372549);
+    background-color: rgba(32, 44, 69, 0.8431372549);
 }
+
 #contact .conactContainer .contact-content {
-  max-width: 70%;
-  text-align: center;
-  padding: 150px 0;
-  margin: auto;
-  color: #fff;
+    max-width: 70%;
+    text-align: center;
+    padding: 150px 0;
+    margin: auto;
+    color: #fff;
 }
+
 #contact .conactContainer .contact-content .call {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 #contact .conactContainer .contact-content .call img {
-  width: 35px;
-  margin: 0;
-  padding: 0;
-  filter: invert(100%);
+    width: 35px;
+    margin: 0;
+    padding: 0;
+    filter: invert(100%);
 }
+
 #contact .conactContainer .contact-content .call h2 {
-  margin: 0;
-  padding: 20px 10px 10px 10px;
+    margin: 0;
+    padding: 20px 10px 10px 10px;
 }
+
 #contact .conactContainer .contact-content h2 {
-  padding: 10px;
+    padding: 10px;
 }
+
 #contact .conactContainer .contact-content p {
-  padding: 20px;
+    padding: 20px;
 }
+
 #contact .conactContainer .contact-content button {
-  padding: 20px 60px;
-  border: none;
-  background-color: #1196CC;
-  margin-top: 20px;
-  color: #fff;
-  border-radius: 30px;
-  transition: all 0.5s ease;
+    padding: 20px 60px;
+    border: none;
+    background-color: #1196CC;
+    margin-top: 20px;
+    color: #fff;
+    border-radius: 30px;
+    transition: all 0.5s ease;
 }
+
 #contact .conactContainer .contact-content button:hover {
-  box-shadow: 0 0 20px 3px #fff;
+    box-shadow: 0 0 20px 3px #fff;
 }
 
 #news {
-  padding: 100px 0;
-  transition: all 0.5s ease;
+    padding: 100px 0;
+    transition: all 0.5s ease;
 }
+
 #news .newsContainer {
-  max-width: 70%;
-  margin: auto;
+    max-width: 70%;
+    margin: auto;
 }
+
 #news .newsContainer .newstitle {
-  text-align: center;
+    text-align: center;
 }
+
 #news .newsContainer .newstitle img {
-  padding: 10px;
+    padding: 10px;
 }
+
 #news .newsContainer .newstitle p {
-  color: gray;
-  font-size: 20px;
+    color: gray;
+    font-size: 20px;
 }
+
 #news .newsContainer .newsContent {
-  margin-top: 100px;
+    margin-top: 100px;
 }
+
 #news .newsContainer .newsContent .newsSlide {
-  background-color: #eee;
+    background-color: #eee;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems {
-  display: flex;
-  justify-content: stretch;
-  align-items: stretch;
-  flex-direction: column;
-  cursor: pointer;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    cursor: pointer;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems:hover .newsBox {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems div {
-  position: relative;
+    position: relative;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems div .newsBox {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(32, 44, 69, 0.662745098);
-  top: 0;
-  transition: all 1s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 44, 69, 0.662745098);
+    top: 0;
+    transition: all 1s ease;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems .newsComment {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #202c45;
-  color: #fff;
-  padding: 10px;
-  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #202c45;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems .newsComment div {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems .newsComment div img {
-  width: 15px;
-  filter: invert(100%);
+    width: 15px;
+    filter: invert(100%);
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems .newsComment div p {
-  padding: 0;
-  margin: 5px 5px 0 5px;
-  font-size: 13px;
+    padding: 0;
+    margin: 5px 5px 0 5px;
+    font-size: 13px;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems .newsBody {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems .newsBody h4 {
-  padding: 10px 0;
-  font-size: 20px;
+    padding: 10px 0;
+    font-size: 20px;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems .newsBody p {
-  font-size: 14px;
-  color: gray;
-  text-align: justify;
+    font-size: 14px;
+    color: gray;
+    text-align: justify;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems .newsBtn {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems .newsBtn button {
-  padding: 15px 30px;
-  border: none;
-  background-color: #202c45;
-  color: #fff;
-  border-radius: 20px;
-  transition: all 0.5s ease;
+    padding: 15px 30px;
+    border: none;
+    background-color: #202c45;
+    color: #fff;
+    border-radius: 20px;
+    transition: all 0.5s ease;
 }
+
 #news .newsContainer .newsContent .newsSlide .slideItems .newsBtn button:hover {
-  background-color: #1196CC;
+    background-color: #1196CC;
 }
 
 #client {
-  background-color: #1196CC;
+    background-color: #1196CC;
 }
+
 #client .clientSwiper {
-  max-width: 70%;
-  text-align: center;
+    max-width: 70%;
+    text-align: center;
 }
+
 #client .clientSwiper .clientSlide {
-  background-color: #1196CC;
+    background-color: #1196CC;
 }
 
 #footer {
-  padding: 100px 0;
-  background-color: #202c45;
+    padding: 100px 0;
+    background-color: #202c45;
 }
+
 #footer .footerContainer {
-  max-width: 75%;
-  margin: auto;
+    max-width: 75%;
+    margin: auto;
 }
+
 #footer .footerContainer .footerAbout {
-  padding: 30px;
-  color: #fff;
+    padding: 30px;
+    color: #fff;
 }
+
 #footer .footerContainer .footerAbout h2 {
-  font-size: 40px;
-  font-weight: 900;
+    font-size: 40px;
+    font-weight: 900;
 }
+
 #footer .footerContainer .footerAbout p {
-  font-size: 16px;
-  color: gray;
+    font-size: 16px;
+    color: gray;
 }
+
 #footer .footerContainer .footerAbout .footerSocial {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
 }
+
 #footer .footerContainer .footerAbout .footerSocial img {
-  width: 30px;
-  height: 30px;
-  margin: 5px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
 }
+
 #footer .footerExplor {
-  color: #fff;
-  padding: 30px 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
+    color: #fff;
+    padding: 30px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
 }
+
 #footer .footerExplor h2 {
-  padding-right: 20px;
+    padding-right: 20px;
 }
+
 #footer .footerExplor .export-uls {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
+
 #footer .footerExplor .export-uls ul {
-  flex-direction: column;
+    flex-direction: column;
 }
+
 #footer .footerExplor .export-uls ul li {
-  color: gray;
-  padding: 10px 10px;
-  list-style-type: "<";
+    color: gray;
+    padding: 10px 10px;
+    list-style-type: "<";
 }
+
 #footer .footerExplor .export-uls ul li:hover {
-  color: #1196CC;
+    color: #1196CC;
 }
+
 #footer .footerExplor .export-uls ul li a {
-  text-decoration: none;
-  color: gray;
+    text-decoration: none;
+    color: gray;
 }
+
 #footer .footerNews {
-  padding: 30px;
-  color: #fff;
+    padding: 30px;
+    color: #fff;
 }
+
 #footer .footerNews .newsItems {
-  padding: 10px 0;
+    padding: 10px 0;
 }
+
 #footer .footerNews .newsItems .newsContent {
-  margin: 20px 0;
-  display: flex;
-  justify-content: stretch;
-  align-items: stretch;
+    margin: 20px 0;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
 }
+
 #footer .footerNews .newsItems .newsContent img {
-  width: 80px;
-  height: 80px;
+    width: 80px;
+    height: 80px;
 }
+
 #footer .footerNews .newsItems .newsContent .linkNews {
-  padding: 10px 20px;
+    padding: 10px 20px;
 }
+
 #footer .footerNews .newsItems .newsContent .linkNews p {
-  color: gray;
-  line-height: 0.5px;
+    color: gray;
+    line-height: 0.5px;
 }
+
 #footer .footerNews .newsItems .newsContent .linkNews a {
-  font-size: 14px;
-  color: #fff;
-  text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
 }
+
 #footer .footerContact {
-  padding: 30px;
-  color: #fff;
+    padding: 30px;
+    color: #fff;
 }
+
 #footer .footerContact .footerItems {
-  color: gray;
-  padding: 20px 0;
+    color: gray;
+    padding: 20px 0;
 }
+
 #footer .footerContact .footerItems div {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
-  padding: 8px 0;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    padding: 8px 0;
 }
+
 #footer .footerContact .footerItems div img {
-  width: 20px;
-  filter: invert(70%);
+    width: 20px;
+    filter: invert(70%);
 }
+
 #footer .footerContact .footerItems div p {
-  margin: 0;
-  padding: 0 10px;
+    margin: 0;
+    padding: 0 10px;
 }
 
 @media screen and (max-width: 600px) {
-  #title .titleContainer {
-    max-width: 100%;
-    display: flex;
-    justify-content: stretch;
-    align-items: center;
-    flex-direction: column;
-  }
-  #title .titleContainer .contact {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-    padding: 10px;
-  }
-  #title .titleContainer .social {
-    padding: 10px;
-  }
-  #navigation .navContainer {
-    max-width: 100%;
-  }
-  #navigation .navContainer .logo {
-    position: absolute;
-    top: 30px;
-    left: 5px;
-  }
-  #navigation .navContainer .nav {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-  #navigation .navContainer .nav .bars .barBtn {
-    display: block;
-    margin-right: 10px;
-  }
-  #navigation .navContainer .nav .nav-ul {
-    background-color: #202c45;
-    margin-top: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: stretch;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-    height: 0px;
-    overflow: hidden;
-  }
-  #navigation .navContainer .nav .nav-ul li {
-    width: 100%;
-    border-bottom: 1px solid #1196CC;
-  }
-  #navigation .navContainer .nav .nav-ul li a {
-    width: 100%;
-    border-radius: 0;
-    color: #fff;
-  }
-  #navigation .navContainer .nav .nav-ul li a:hover {
-    color: #1196CC;
-  }
-  #info .info {
-    position: static;
-  }
-  #info .info .rowInfo {
-    max-width: 100%;
-  }
-  #weCare .weCareContainer {
-    margin-top: 100px;
-  }
-  #weCare .weCareContainer .weCareContent {
-    max-width: 90%;
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-  }
-  #weCare .weCareContainer .weCareContent .weCareImg {
-    width: 100%;
-  }
-  #weCare .weCareContainer .weCareContent .weCareText {
-    width: 100%;
-    margin-top: 20px;
-    padding: 0;
-  }
-  #service .serviceContainer {
-    max-width: 100%;
-  }
-  #depertment .depContainer {
-    max-width: 90%;
-  }
-  #depertment .depContainer .depContent .depRow {
-    margin: 40px 20px;
-    width: calc(100% - 40px);
-  }
-  #dentist .dentistContainer {
-    max-width: 90%;
-  }
-  #price .priceContainer {
-    max-width: 100%;
-  }
-  #price .priceContent .price-rowItems {
-    width: calc(100% - 70px);
-    margin: 20px 35px;
-  }
-  #price .priceContent .price-rowItems button {
-    padding: 10px 60px;
-  }
-  #footer .footerContainer {
-    max-width: 100%;
-  }
+    #title .titleContainer {
+        max-width: 100%;
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #title .titleContainer .contact {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #title .titleContainer .social {
+        padding: 10px;
+    }
+
+    #navigation .navContainer {
+        max-width: 100%;
+    }
+
+    #navigation .navContainer .logo {
+        position: absolute;
+        top: 30px;
+        left: 5px;
+    }
+
+    #navigation .navContainer .nav {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #navigation .navContainer .nav .bars .barBtn {
+        display: block;
+        margin-right: 10px;
+    }
+
+    #navigation .navContainer .nav .nav-ul {
+        background-color: #202c45;
+        margin-top: 10px;
+        padding: 0;
+        display: flex;
+        justify-content: stretch;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+    }
+
+    #navigation .navContainer .nav .nav-ul li {
+        width: 100%;
+        border-bottom: 1px solid #1196CC;
+    }
+
+    #navigation .navContainer .nav .nav-ul li a {
+        width: 100%;
+        border-radius: 0;
+        color: #fff;
+    }
+
+    #navigation .navContainer .nav .nav-ul li a:hover {
+        color: #1196CC;
+    }
+
+    #info .info {
+        position: static;
+    }
+
+    #info .info .rowInfo {
+        max-width: 100%;
+    }
+
+    #weCare .weCareContainer {
+        margin-top: 100px;
+    }
+
+    #weCare .weCareContainer .weCareContent {
+        max-width: 90%;
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #weCare .weCareContainer .weCareContent .weCareImg {
+        width: 100%;
+    }
+
+    #weCare .weCareContainer .weCareContent .weCareText {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #service .serviceContainer {
+        max-width: 100%;
+    }
+
+    #depertment .depContainer {
+        max-width: 90%;
+    }
+
+    #depertment .depContainer .depContent .depRow {
+        margin: 40px 20px;
+        width: calc(100% - 40px);
+    }
+
+    #dentist .dentistContainer {
+        max-width: 90%;
+    }
+
+    #price .priceContainer {
+        max-width: 100%;
+    }
+
+    #price .priceContent .price-rowItems {
+        width: calc(100% - 70px);
+        margin: 20px 35px;
+    }
+
+    #price .priceContent .price-rowItems button {
+        padding: 10px 60px;
+    }
+
+    #footer .footerContainer {
+        max-width: 100%;
+    }
 }
+
 @media screen and (min-width: 600px) and (max-width: 768px) {
-  #title .titleContainer {
-    max-width: 100%;
-    display: flex;
-    justify-content: stretch;
-    align-items: center;
-    flex-direction: column;
-  }
-  #title .titleContainer .contact {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-    padding: 10px;
-  }
-  #title .titleContainer .social {
-    padding: 10px;
-  }
-  #navigation .navContainer {
-    max-width: 100%;
-  }
-  #navigation .navContainer .logo {
-    position: absolute;
-    top: 30px;
-    left: 5px;
-  }
-  #navigation .navContainer .nav {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-  #navigation .navContainer .nav .bars .barBtn {
-    display: block;
-    margin-right: 10px;
-  }
-  #navigation .navContainer .nav .nav-ul {
-    background-color: #202c45;
-    margin-top: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: stretch;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-    height: 0px;
-    overflow: hidden;
-  }
-  #navigation .navContainer .nav .nav-ul li {
-    width: 100%;
-    border-bottom: 1px solid #1196CC;
-  }
-  #navigation .navContainer .nav .nav-ul li a {
-    width: 100%;
-    border-radius: 0;
-    color: #fff;
-  }
-  #navigation .navContainer .nav .nav-ul li a:hover {
-    color: #1196CC;
-  }
-  #info .info {
-    position: static;
-  }
-  #info .info .rowInfo {
-    max-width: 100%;
-  }
-  #weCare .weCareContainer {
-    margin-top: 100px;
-  }
-  #weCare .weCareContainer .weCareContent {
-    max-width: 90%;
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-  }
-  #weCare .weCareContainer .weCareContent .weCareImg {
-    width: 100%;
-  }
-  #weCare .weCareContainer .weCareContent .weCareText {
-    width: 100%;
-    margin-top: 20px;
-    padding: 0;
-  }
-  #service .serviceContainer {
-    max-width: 90%;
-  }
-  #service .serviceContainer .serviceContent .servItems {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-  }
-  #service .serviceContainer .serviceContent .servItems .servText {
-    padding: 20px 0;
-  }
-  #depertment .depContainer {
-    max-width: 90%;
-  }
-  #depertment .depContainer .depContent .depRow {
-    margin: 20px;
-    width: calc(100% - 40px);
-  }
-  #dentist .dentistContainer {
-    max-width: 85%;
-  }
-  #price .priceContainer {
-    max-width: 90%;
-  }
-  #price .priceContent .price-rowItems {
-    width: calc(100% - 70px);
-    margin: 20px 35px;
-  }
-  #price .priceContent .price-rowItems button {
-    padding: 10px 60px;
-  }
-  #footer .footerContainer {
-    max-width: 100%;
-  }
+    #title .titleContainer {
+        max-width: 100%;
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #title .titleContainer .contact {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #title .titleContainer .social {
+        padding: 10px;
+    }
+
+    #navigation .navContainer {
+        max-width: 100%;
+    }
+
+    #navigation .navContainer .logo {
+        position: absolute;
+        top: 30px;
+        left: 5px;
+    }
+
+    #navigation .navContainer .nav {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #navigation .navContainer .nav .bars .barBtn {
+        display: block;
+        margin-right: 10px;
+    }
+
+    #navigation .navContainer .nav .nav-ul {
+        background-color: #202c45;
+        margin-top: 10px;
+        padding: 0;
+        display: flex;
+        justify-content: stretch;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+    }
+
+    #navigation .navContainer .nav .nav-ul li {
+        width: 100%;
+        border-bottom: 1px solid #1196CC;
+    }
+
+    #navigation .navContainer .nav .nav-ul li a {
+        width: 100%;
+        border-radius: 0;
+        color: #fff;
+    }
+
+    #navigation .navContainer .nav .nav-ul li a:hover {
+        color: #1196CC;
+    }
+
+    #info .info {
+        position: static;
+    }
+
+    #info .info .rowInfo {
+        max-width: 100%;
+    }
+
+    #weCare .weCareContainer {
+        margin-top: 100px;
+    }
+
+    #weCare .weCareContainer .weCareContent {
+        max-width: 90%;
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #weCare .weCareContainer .weCareContent .weCareImg {
+        width: 100%;
+    }
+
+    #weCare .weCareContainer .weCareContent .weCareText {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #service .serviceContainer {
+        max-width: 90%;
+    }
+
+    #service .serviceContainer .serviceContent .servItems {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #service .serviceContainer .serviceContent .servItems .servText {
+        padding: 20px 0;
+    }
+
+    #depertment .depContainer {
+        max-width: 90%;
+    }
+
+    #depertment .depContainer .depContent .depRow {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+
+    #dentist .dentistContainer {
+        max-width: 85%;
+    }
+
+    #price .priceContainer {
+        max-width: 90%;
+    }
+
+    #price .priceContent .price-rowItems {
+        width: calc(100% - 70px);
+        margin: 20px 35px;
+    }
+
+    #price .priceContent .price-rowItems button {
+        padding: 10px 60px;
+    }
+
+    #footer .footerContainer {
+        max-width: 100%;
+    }
 }
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  #title .titleContainer {
-    max-width: 100%;
-    display: flex;
-    justify-content: stretch;
-    align-items: center;
-    flex-direction: column;
-  }
-  #title .titleContainer .contact {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-    padding: 10px;
-  }
-  #title .titleContainer .social {
-    padding: 10px;
-  }
-  #navigation .navContainer {
-    max-width: 100%;
-  }
-  #navigation .navContainer .logo {
-    position: absolute;
-    top: 30px;
-    left: 5px;
-  }
-  #navigation .navContainer .nav {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-  #navigation .navContainer .nav .bars .barBtn {
-    display: block;
-    margin-right: 10px;
-  }
-  #navigation .navContainer .nav .nav-ul {
-    background-color: #202c45;
-    margin-top: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: stretch;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-    height: 0px;
-    overflow: hidden;
-  }
-  #navigation .navContainer .nav .nav-ul li {
-    width: 100%;
-    border-bottom: 1px solid #1196CC;
-  }
-  #navigation .navContainer .nav .nav-ul li a {
-    width: 100%;
-    border-radius: 0;
-    color: #fff;
-  }
-  #navigation .navContainer .nav .nav-ul li a:hover {
-    color: #1196CC;
-  }
-  #info .info {
-    position: static;
-  }
-  #info .info .rowInfo {
-    max-width: 100%;
-  }
-  #weCare .weCareContainer {
-    margin-top: 100px;
-  }
-  #weCare .weCareContainer .weCareContent {
-    max-width: 90%;
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-  }
-  #weCare .weCareContainer .weCareContent .weCareImg {
-    width: 100%;
-  }
-  #weCare .weCareContainer .weCareContent .weCareText {
-    width: 100%;
-    margin-top: 20px;
-    padding: 0;
-  }
-  #service .serviceContainer {
-    max-width: 90%;
-  }
-  #service .serviceContainer .serviceContent .servItems {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-  }
-  #service .serviceContainer .serviceContent .servItems .servText {
-    padding: 20px 0;
-  }
-  #depertment .depContainer {
-    max-width: 90%;
-  }
-  #depertment .depContainer .depContent .depRow {
-    margin: 20px;
-    width: calc(100% - 40px);
-  }
-  #dentist .dentistContainer {
-    max-width: 85%;
-  }
-  #price .priceContainer {
-    max-width: 85%;
-  }
-  #price .priceContent .price-rowItems {
-    width: calc(100% - 70px);
-    margin: 20px 35px;
-  }
-  #price .priceContent .price-rowItems button {
-    padding: 10px 60px;
-  }
+    #title .titleContainer {
+        max-width: 100%;
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #title .titleContainer .contact {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #title .titleContainer .social {
+        padding: 10px;
+    }
+
+    #navigation .navContainer {
+        max-width: 100%;
+    }
+
+    #navigation .navContainer .logo {
+        position: absolute;
+        top: 30px;
+        left: 5px;
+    }
+
+    #navigation .navContainer .nav {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #navigation .navContainer .nav .bars .barBtn {
+        display: block;
+        margin-right: 10px;
+    }
+
+    #navigation .navContainer .nav .nav-ul {
+        background-color: #202c45;
+        margin-top: 10px;
+        padding: 0;
+        display: flex;
+        justify-content: stretch;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+    }
+
+    #navigation .navContainer .nav .nav-ul li {
+        width: 100%;
+        border-bottom: 1px solid #1196CC;
+    }
+
+    #navigation .navContainer .nav .nav-ul li a {
+        width: 100%;
+        border-radius: 0;
+        color: #fff;
+    }
+
+    #navigation .navContainer .nav .nav-ul li a:hover {
+        color: #1196CC;
+    }
+
+    #info .info {
+        position: static;
+    }
+
+    #info .info .rowInfo {
+        max-width: 100%;
+    }
+
+    #weCare .weCareContainer {
+        margin-top: 100px;
+    }
+
+    #weCare .weCareContainer .weCareContent {
+        max-width: 90%;
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #weCare .weCareContainer .weCareContent .weCareImg {
+        width: 100%;
+    }
+
+    #weCare .weCareContainer .weCareContent .weCareText {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #service .serviceContainer {
+        max-width: 90%;
+    }
+
+    #service .serviceContainer .serviceContent .servItems {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #service .serviceContainer .serviceContent .servItems .servText {
+        padding: 20px 0;
+    }
+
+    #depertment .depContainer {
+        max-width: 90%;
+    }
+
+    #depertment .depContainer .depContent .depRow {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+
+    #dentist .dentistContainer {
+        max-width: 85%;
+    }
+
+    #price .priceContainer {
+        max-width: 85%;
+    }
+
+    #price .priceContent .price-rowItems {
+        width: calc(100% - 70px);
+        margin: 20px 35px;
+    }
+
+    #price .priceContent .price-rowItems button {
+        padding: 10px 60px;
+    }
 }
+
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-  #title .titleContainer {
-    max-width: 100%;
-    display: flex;
-    justify-content: stretch;
-    align-items: center;
-    flex-direction: column;
-  }
-  #title .titleContainer .contact {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-    padding: 10px;
-  }
-  #title .titleContainer .social {
-    padding: 10px;
-  }
-  #navigation .navContainer {
-    max-width: 100%;
-  }
-  #info .info {
-    position: static;
-  }
-  #info .info .rowInfo {
-    max-width: 100%;
-  }
-  #info .info .rowInfo .topDoc {
-    background-color: #1196CC;
-  }
-  #info .info .rowInfo .topDoc button {
-    background-color: transparent;
-  }
-  #info .info .rowInfo .wt {
-    background-color: #202c45;
-  }
-  #service .serviceContainer {
-    max-width: 90%;
-  }
-  #service .serviceContainer .serviceContent .servItems {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-  }
-  #service .serviceContainer .serviceContent .servItems .servText {
-    padding: 20px 0;
-  }
-  #dentist .dentistContainer {
-    max-width: 85%;
-  }
-  #price .priceContainer {
-    max-width: 70%;
-  }
-  #price .priceContent .price-rowItems {
-    width: calc(100% - 70px);
-    margin: 20px 35px;
-  }
-  #price .priceContent .price-rowItems button {
-    padding: 10px 60px;
-  }
+    #title .titleContainer {
+        max-width: 100%;
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #title .titleContainer .contact {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #title .titleContainer .social {
+        padding: 10px;
+    }
+
+    #navigation .navContainer {
+        max-width: 100%;
+    }
+
+    #info .info {
+        position: static;
+    }
+
+    #info .info .rowInfo {
+        max-width: 100%;
+    }
+
+    #info .info .rowInfo .topDoc {
+        background-color: #1196CC;
+    }
+
+    #info .info .rowInfo .topDoc button {
+        background-color: transparent;
+    }
+
+    #info .info .rowInfo .wt {
+        background-color: #202c45;
+    }
+
+    #service .serviceContainer {
+        max-width: 90%;
+    }
+
+    #service .serviceContainer .serviceContent .servItems {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #service .serviceContainer .serviceContent .servItems .servText {
+        padding: 20px 0;
+    }
+
+    #dentist .dentistContainer {
+        max-width: 85%;
+    }
+
+    #price .priceContainer {
+        max-width: 70%;
+    }
+
+    #price .priceContent .price-rowItems {
+        width: calc(100% - 70px);
+        margin: 20px 35px;
+    }
+
+    #price .priceContent .price-rowItems button {
+        padding: 10px 60px;
+    }
 }
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-  #info .info {
-    position: static;
-  }
-  #info .info .rowInfo {
-    max-width: 100%;
-  }
-  #info .info .rowInfo .topDoc {
-    background-color: #1196CC;
-  }
-  #info .info .rowInfo .topDoc button {
-    background-color: transparent;
-  }
-  #info .info .rowInfo .wt {
-    background-color: #202c45;
-  }
-  #service .serviceContainer {
-    max-width: 80%;
-  }
-  #service .serviceContainer .serviceContent .servItems {
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-    flex-direction: column;
-  }
-  #service .serviceContainer .serviceContent .servItems .servText {
-    padding: 20px 0;
-  }
-  #dentist .dentistContainer {
-    max-width: 83%;
-  }
-  #price .priceContainer {
-    max-width: 85%;
-  }
-  #price .priceContent .price-rowItems {
-    width: calc(50% - 70px);
-    margin: 20px 35px;
-  }
-  #price .priceContent .price-rowItems button {
-    padding: 10px 60px;
-  }
-  #footer .footerContainer {
-    max-width: 100%;
-  }
-}/*# sourceMappingURL=style.css.map */
+    #info .info {
+        position: static;
+    }
 
+    #info .info .rowInfo {
+        max-width: 100%;
+    }
 
+    #info .info .rowInfo .topDoc {
+        background-color: #1196CC;
+    }
+
+    #info .info .rowInfo .topDoc button {
+        background-color: transparent;
+    }
+
+    #info .info .rowInfo .wt {
+        background-color: #202c45;
+    }
+
+    #service .serviceContainer {
+        max-width: 80%;
+    }
+
+    #service .serviceContainer .serviceContent .servItems {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #service .serviceContainer .serviceContent .servItems .servText {
+        padding: 20px 0;
+    }
+
+    #dentist .dentistContainer {
+        max-width: 83%;
+    }
+
+    #price .priceContainer {
+        max-width: 85%;
+    }
+
+    #price .priceContent .price-rowItems {
+        width: calc(50% - 70px);
+        margin: 20px 35px;
+    }
+
+    #price .priceContent .price-rowItems button {
+        padding: 10px 60px;
+    }
+
+    #footer .footerContainer {
+        max-width: 100%;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
 
 
 .social-members-item {
-  position: relative;
-  height: 270px;
-  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .15) !important;
-  transition: .7s ease-out
+    position: relative;
+    height: 270px;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .15) !important;
+    transition: .7s ease-out
 }
 
 .social-member-icon {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  background: #FFF;
-  box-shadow: 0 .1rem .5rem rgba(0, 0, 0, .15) !important;
-  top: -20px;
-  transition: .5s ease-out;
-  padding-bottom : 10px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background: #FFF;
+    box-shadow: 0 .1rem .5rem rgba(0, 0, 0, .15) !important;
+    top: -20px;
+    transition: .5s ease-out;
+    padding-bottom: 10px;
 }
 
 .social-members-parent {
-  /*background: #f1f1f1*/
+    /*background: #f1f1f1*/
 }
 
 .social-members-item:hover {
-  box-shadow: 0 .1rem 2rem rgba(0, 0, 0, .15) !important;
-  transition: .5s ease-out
+    box-shadow: 0 .1rem 2rem rgba(0, 0, 0, .15) !important;
+    transition: .5s ease-out
 }
 
 .social-members-item:hover div.social-member-icon {
-  transform: scale(1.1) translateY(-10px);
-  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .1) !important;
-  transition: .5s ease-out
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .1) !important;
+    transition: .5s ease-out
 }
 
 .social-members-item:hover, .social-member-item:active {
-  transform: scale(1.03)
+    transform: scale(1.03)
 }
-
 
 
 .contactContainer {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
-  flex-direction: column;
-  max-width: 80%;
-  margin: auto;
-  padding: 70px 0;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+    padding: 70px 0;
 }
+
 .contactContainer .contactText-header h3 {
-  font-size: 25px;
-  font-weight: 900;
-  color: #1196CC;
-  line-height: 0.5cm;
+    font-size: 25px;
+    font-weight: 900;
+    color: #1196CC;
+    line-height: 0.5cm;
 }
+
 .contactContainer .contactText-detail p {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 0.9cm;
-  text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 0.9cm;
+    text-align: center;
 }
+
 .contactContainer .line {
-  width: 70px;
-  height: 3px;
-  background-color: #1196CC;
-  margin-bottom: 20px;
+    width: 70px;
+    height: 3px;
+    background-color: #1196CC;
+    margin-bottom: 20px;
 }
+
 .contactContainer .contactContent {
-  display: flex;
-  justify-content: stretch;
-  align-items: stretch;
-  flex-wrap: wrap;
-  width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
 }
+
 .contactContainer .contactContent .contentForm {
-  background-color: #fff;
-  margin: 10px;
-  width: calc(60% - 20px);
-  border-bottom: solid 3px #1196CC;
-  border-top: solid 3px #1196CC;
-  box-shadow: 0 0 15px 5px rgb(238, 238, 238);
+    background-color: #fff;
+    margin: 10px;
+    width: calc(60% - 20px);
+    border-bottom: solid 3px #1196CC;
+    border-top: solid 3px #1196CC;
+    box-shadow: 0 0 15px 5px rgb(238, 238, 238);
 }
+
 .contactContainer .contactContent .contentForm form {
-  padding: 30px;
+    padding: 30px;
 }
+
 .contactContainer .contactContent .contentForm form .user {
-  display: flex;
-  justify-content: stretch;
-  align-items: stretch;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
 }
+
 .contactContainer .contactContent .contentForm form .user .userItem {
-  width: 50%;
+    width: 50%;
 }
+
 .contactContainer .contactContent .contentForm form .user .userItem .labelUser {
-  margin-right: 10px;
+    margin-right: 10px;
 }
+
 .contactContainer .contactContent .contentForm form .user .userItem .inputUser {
-  width: calc(100% - 20px);
-  margin: 5px 10px;
-  padding: 8px;
-  border: solid 1px #acaaaa;
-  outline: none;
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+    padding: 8px;
+    border: solid 1px #acaaaa;
+    outline: none;
 }
+
 .contactContainer .contactContent .contentForm form .labelUser {
-  margin-right: 10px;
+    margin-right: 10px;
 }
+
 .contactContainer .contactContent .contentForm form .Subject {
-  width: calc(100% - 20px);
-  margin: 5px 10px;
-  padding: 8px;
-  border: solid 1px #acaaaa;
-  outline: none;
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+    padding: 8px;
+    border: solid 1px #acaaaa;
+    outline: none;
 }
+
 .contactContainer .contactContent .contentForm form .message {
-  width: calc(100% - 20px);
-  margin: 5px 10px;
-  padding: 8px;
-  border: solid 1px #acaaaa;
-  outline: none;
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+    padding: 8px;
+    border: solid 1px #acaaaa;
+    outline: none;
 }
+
 .contactContainer .contactContent .contentForm form div {
-  text-align: center;
+    text-align: center;
 }
+
 .contactContainer .contactContent .contentForm form div .send {
-  width: 150px;
-  margin: 10px auto 40px auto;
-  color: #fff;
-  background-color: #1196CC;
-  padding: 10px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  transition: all 0.5s ease;
+    width: 150px;
+    margin: 10px auto 40px auto;
+    color: #fff;
+    background-color: #1196CC;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s ease;
 }
+
 .contactContainer .contactContent .contentForm form div .send:hover {
-  background-color: #202c45;
+    background-color: #202c45;
 }
+
 .contactContainer .contactContent .contentAddress {
-  margin: 10px;
-  padding: 0 30px;
-  width: calc(40% - 20px);
-  border-bottom: solid 3px #1196CC;
-  border-top: solid 3px #1196CC;
-  box-shadow: 0 0 15px 5px rgb(223, 223, 223);
+    margin: 10px;
+    padding: 0 30px;
+    width: calc(40% - 20px);
+    border-bottom: solid 3px #1196CC;
+    border-top: solid 3px #1196CC;
+    box-shadow: 0 0 15px 5px rgb(223, 223, 223);
 }
+
 .contactContainer .contactContent .contentAddress .location {
-  display: flex;
-  justify-content: stretch;
-  align-items: flex-start;
-  padding-top: 30px;
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+    padding-top: 30px;
 }
+
 .contactContainer .contactContent .contentAddress .location img {
-  width: 20px;
+    width: 20px;
 }
+
 .contactContainer .contactContent .contentAddress .location .locationText {
-  padding-right: 15px;
+    padding-right: 15px;
 }
+
 .contactContainer .contactContent .contentAddress .location .locationText p {
-  color: #ab9d95;
+    color: #ab9d95;
+}
+
+.h290px {
+    height: 290px;
+}
+
+@media screen and (max-width: 600px) {
+    .contactContainer {
+        max-width: 100%;
+    }
+
+    .contactContainer .contactContent .contentForm {
+        width: calc(100% - 20px);
+    }
+
+    .contactContainer .contactContent .contentAddress {
+        width: calc(100% - 20px);
+    }
+
+    .contactContainer .contactContent .contentAddress form .user {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+
+    .contactContainer .contactContent .contentAddress form .user .userItem {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .contactContainer {
+        max-width: 100%;
+    }
+
+    .contactContainer .contactContent .contentForm {
+        width: calc(100% - 20px);
+    }
+
+    .contactContainer .contactContent .contentAddress {
+        width: calc(100% - 20px);
+    }
+
+    .contactContainer .contactContent .contentAddress form .user {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+
+    .contactContainer .contactContent .contentAddress form .user .userItem {
+        width: 100%;
+    }
+}
+
+
+.section-box-card {
+    transition: .2s ease-in-out;
+    height: 200px;
+    border-radius: 6px;
+    box-shadow: 0 0 .2rem rgba(0, 0, 0, .2) !important
+}
+
+.guide-panel-btns, .section-box-card:hover {
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .1) !important
+}
+
+.section-box-card span {
+    font-size: 20px
+}
+
+.section-box-card:hover {
+    transition: .4s ease-in-out;
+    transform: translateY(-10px)
+}
+
+.section-boxes {
+    margin-bottom: 100px
+}
+
+h1 {
+    color: #080808;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s
+}
+
+h1 span {
+    display: block;
+    font-size: .5em;
+    line-height: 1.3
+}
+
+h1 em {
+    font-style: normal;
+    font-weight: 600
+}
+
+.eight h1 {
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-columns:1fr auto 1fr;
+    grid-template-rows:16px 0;
+    grid-gap: 22px
+}
+
+.tab input, .tab-section {
+    display: none
+}
+
+.eight h1:after, .eight h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid #933943
+}
+
+.info-section {
+    margin-top: -150px;
+    position: relative;
+    height: 300px;
+    z-index: 10;
+
+
+}
+
+.info-inner {
+    width: 80%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.header {
+    margin-top: -25px;
+}
+
+.seven h1 {
+    text-align: center;
+    font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
+    text-transform: uppercase;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.seven h1:after,.seven h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #c50000;
+    border-top: 1px solid #c50000;
+    height: 5px;
+    background-color:#f8f8f8;
+}
+
+
+h1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    font-size: 40px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+h1 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+}
+
+h1 em {
+    font-style: normal;
+    font-weight: 600;
 }

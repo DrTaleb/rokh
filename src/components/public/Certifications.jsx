@@ -5,7 +5,8 @@ export default function Certifications({data}){
 
 
     return(
-        <div id={"certificate"}>
+        <div className={"bg-light pb-5"}>
+            <img className="w-100 pb-2" src={"/img/wave.webp"} alt="#"/>
             <div  className={"container"}>
                 <Swiper
                     autoplay={{
@@ -39,6 +40,7 @@ export default function Certifications({data}){
 
                 </Swiper>
             </div>
+            {/*<img className="wave-img w-100" src={"img/Vector%20(1)%20(1).webp"} alt=""/>*/}
         </div>
     )
 }

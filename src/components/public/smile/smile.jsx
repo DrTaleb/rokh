@@ -7,7 +7,7 @@ export default function Smile() {
 
 
     return (
-        <section id="smile" className="reveal" style={{
+        <section id="smile"  style={{
             background: `url(${bg.src})`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
