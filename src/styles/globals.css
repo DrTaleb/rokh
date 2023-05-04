@@ -1519,3 +1519,126 @@ a {
 .social-members-item:hover, .social-member-item:active {
   transform: scale(1.03)
 }
+
+
+
+.contactContainer {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex-direction: column;
+  max-width: 80%;
+  margin: auto;
+  padding: 70px 0;
+}
+.contactContainer .contactText-header h3 {
+  font-size: 25px;
+  font-weight: 900;
+  color: #1196CC;
+  line-height: 0.5cm;
+}
+.contactContainer .contactText-detail p {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 0.9cm;
+  text-align: center;
+}
+.contactContainer .line {
+  width: 70px;
+  height: 3px;
+  background-color: #1196CC;
+  margin-bottom: 20px;
+}
+.contactContainer .contactContent {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.contactContainer .contactContent .contentForm {
+  background-color: #fff;
+  margin: 10px;
+  width: calc(60% - 20px);
+  border-bottom: solid 3px #1196CC;
+  border-top: solid 3px #1196CC;
+  box-shadow: 0 0 15px 5px rgb(238, 238, 238);
+}
+.contactContainer .contactContent .contentForm form {
+  padding: 30px;
+}
+.contactContainer .contactContent .contentForm form .user {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+.contactContainer .contactContent .contentForm form .user .userItem {
+  width: 50%;
+}
+.contactContainer .contactContent .contentForm form .user .userItem .labelUser {
+  margin-right: 10px;
+}
+.contactContainer .contactContent .contentForm form .user .userItem .inputUser {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  padding: 8px;
+  border: solid 1px #acaaaa;
+  outline: none;
+}
+.contactContainer .contactContent .contentForm form .labelUser {
+  margin-right: 10px;
+}
+.contactContainer .contactContent .contentForm form .Subject {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  padding: 8px;
+  border: solid 1px #acaaaa;
+  outline: none;
+}
+.contactContainer .contactContent .contentForm form .message {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  padding: 8px;
+  border: solid 1px #acaaaa;
+  outline: none;
+}
+.contactContainer .contactContent .contentForm form div {
+  text-align: center;
+}
+.contactContainer .contactContent .contentForm form div .send {
+  width: 150px;
+  margin: 10px auto 40px auto;
+  color: #fff;
+  background-color: #1196CC;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.contactContainer .contactContent .contentForm form div .send:hover {
+  background-color: #202c45;
+}
+.contactContainer .contactContent .contentAddress {
+  margin: 10px;
+  padding: 0 30px;
+  width: calc(40% - 20px);
+  border-bottom: solid 3px #1196CC;
+  border-top: solid 3px #1196CC;
+  box-shadow: 0 0 15px 5px rgb(223, 223, 223);
+}
+.contactContainer .contactContent .contentAddress .location {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+.contactContainer .contactContent .contentAddress .location img {
+  width: 20px;
+}
+.contactContainer .contactContent .contentAddress .location .locationText {
+  padding-right: 15px;
+}
+.contactContainer .contactContent .contentAddress .location .locationText p {
+  color: #ab9d95;
+}
