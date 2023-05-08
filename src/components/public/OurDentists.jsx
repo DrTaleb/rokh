@@ -56,6 +56,51 @@ export default function OurDentists(){
                                     </div>
                                 </div>
                             </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="dentistSlide">
+                                <div className="img">
+                                    <img src={"/img/dentis1.jpg"} alt=""/>
+                                    <div className="dentBox"></div>
+                                </div>
+                                <h4>Dr.William</h4>
+                                <p>دندان پزشک</p>
+                                <div className="dent-social">
+                                    <Button variant="contained" endIcon={<InfoIcon />}>
+                                        پروفایل کاربری
+                                    </Button>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="dentistSlide">
+                                <div className="img">
+                                    <img src={"/img/dentis1.jpg"} alt=""/>
+                                    <div className="dentBox"></div>
+                                </div>
+                                <h4>Dr.William</h4>
+                                <p>دندان پزشک</p>
+                                <div className="dent-social">
+                                    <Button variant="contained" endIcon={<InfoIcon />}>
+                                        پروفایل کاربری
+                                    </Button>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="dentistSlide">
+                                <div className="img">
+                                    <img src={"/img/dentis1.jpg"} alt=""/>
+                                    <div className="dentBox"></div>
+                                </div>
+                                <h4>Dr.William</h4>
+                                <p>دندان پزشک</p>
+                                <div className="dent-social">
+                                    <Button variant="contained" endIcon={<InfoIcon />}>
+                                        پروفایل کاربری
+                                    </Button>
+                                </div>
+                            </div>
+                        </SwiperSlide>
 
                     </Swiper>
                 </div>

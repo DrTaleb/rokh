@@ -2,6 +2,7 @@ import "../styles/SliderSection.css"
 // import "../styles/slider.css"
 import '@/styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.rtl.min.css';
+import 'swiper/swiper.css'
 import {useEffect} from "react";
 import AOS from "aos";
 import {createTheme, ThemeProvider} from "@mui/material";

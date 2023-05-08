@@ -35,8 +35,21 @@ export default function Certifications({data}){
                 >
 
                     <SwiperSlide>
-                        <img src={"/img/b1.jpg"} alt=""/>
+                        <img className={"img-fluid"} src={"/img/b1.jpg"} alt=""/>
                     </SwiperSlide>
+                    <SwiperSlide>
+                        <img className={"img-fluid"} src={"/img/b1.jpg"} alt=""/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className={"img-fluid"} src={"/img/b1.jpg"} alt=""/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className={"img-fluid"} src={"/img/b1.jpg"} alt=""/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className={"img-fluid"} src={"/img/b1.jpg"} alt=""/>
+                    </SwiperSlide>
+
 
                 </Swiper>
             </div>

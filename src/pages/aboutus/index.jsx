@@ -66,21 +66,21 @@ export default function Aboutus() {
                 <img className="w-100 pb-5" src={"/img/wave.webp"}/>
                 <div
                     className="container row flex-wrap text-center align-items-center justify-content-center mx-auto more-contact-us">
-                    <h2 className="text-center mb-5">تماس با ما</h2>
-                    <a href="#" className="col-6 col-sm-5 col-md-3 col-xl-2 mx-2 mb-2 text-decoration-none border-2 border rounded-3 py-4 border-secondary text-secondary">
+                    <h2 className="text-center mb-5">اطلاعات تماس</h2>
+                    <a href="#" className="col-6 col-sm-5 col-md-3 col-xl-2 mx-2 mb-2 text-decoration-none rounded-3 py-4 shadow bg-white text-secondary">
                         <i className="fa-solid fa-phone"></i>
                         <h2>تلفن</h2>
                         <p>۰21-28425066</p>
                     </a>
-                    <a href="#" className="col-6 col-sm-5 col-md-3 col-xl-2 mx-2 mb-2 text-decoration-none border-2 border rounded-3 py-4 border-warning text-warning">
+                    <a href="#" className="col-6 col-sm-5 col-md-3 col-xl-2 mx-2 mb-2 text-decoration-none rounded-3 py-4 shadow bg-white text-secondary">
                         <i className="fa-solid fa-headset"></i>
                         <h2>پشتیبانی</h2>
-                        <p>info@paya360.ir</p>
+                        <p>info@lorem.ir</p>
                     </a>
-                    <a href="#" className="col-6 col-sm-5 col-md-3 col-xl-2 mx-2 mb-2 text-decoration-none border-2 border rounded-3 py-4 border-danger text-danger">
+                    <a href="#" className="col-6 col-sm-5 col-md-3 col-xl-2 mx-2 mb-2 text-decoration-none rounded-3 py-4 shadow bg-white text-secondary">
                         <i className="fa-regular fa-envelope"></i>
                         <h2>ایمیل</h2>
-                        <p>info@paya360.ir</p>
+                        <p>info@lorem.ir</p>
                     </a>
                 </div>
                 <img className="w-100" src={"img/Vector%20(1)%20(1).webp"}/>

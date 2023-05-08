@@ -9,7 +9,7 @@ export default function Header(){
     return(
        <>
            <section id="title">
-               <div className="titleContainer">
+               <div className="d-flex flex-row align-items-center justify-content-between px-2 px-md-5 py-sm-2">
                    <div className="d-flex flex-sm-row flex-column align-items-center gap-sm-5 gap-2">
                        <div className="d-flex flex-row align-items-center gap-3">
                            <LocalPhoneIcon className={"text-white"}></LocalPhoneIcon>
@@ -20,10 +20,10 @@ export default function Header(){
                            <span className={"text-white"}>آدرس : مشهد ، بوار مجد </span>
                        </div>
                    </div>
-                   <div className="social mt-3 mt-sm-0">
+                   <div className="social mt-sm-0">
                        <div className="appoint">
                            {/*<a href="sub_page/takeTurn.html">گرفتن نوبت پزشک</a>*/}
-                           <Button size={"large"} className={"py-3 my-1"} color={"primary"} variant={"contained"}>گرفتن نوبت پزشک</Button>
+                           <Button size={"large"} className={"py-3 my-1"} color={"error"} variant={"contained"}>گرفتن نوبت پزشک</Button>
                        </div>
                    </div>
                </div>
