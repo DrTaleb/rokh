@@ -6,7 +6,7 @@ export default function Features() {
             <div className="container">
                 <div className="serviceTitle">
                     <div className="eight">
-                        <h1> نمونه خدمات دندان پزشکی ما در کلینیک رخ</h1>
+                        <h1 className={"text-center"}> نمونه خدمات دندان پزشکی ما در کلینیک رخ</h1>
                     </div>
                 </div>
                 <section className="section-boxes mt-5">

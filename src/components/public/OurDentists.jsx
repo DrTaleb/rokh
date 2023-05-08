@@ -3,17 +3,16 @@ import {Autoplay, Navigation} from "swiper";
 import {Button} from "@mui/material";
 import InfoIcon from '@mui/icons-material/Info';
 
-export default function OurDentists(){
+export default function OurDentists() {
 
 
-
-    return(
+    return (
         <section id="dentist" className="reveal">
             <div className="dentistContainer w-100">
                 <div className="dentistTitle">
                     <h3>پزشکان ما</h3>
                     <img src="assets/img/title-icon.png" alt=""/>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
                 </div>
                 <div>
                     <Swiper
@@ -41,67 +40,66 @@ export default function OurDentists(){
                         modules={[Navigation, Autoplay]}
                         className="mySwiper w-100 mt-5"
                     >
-                            <SwiperSlide>
-                                <div className="dentistSlide">
-                                    <div className="img">
-                                        <img src={"/img/dentis1.jpg"} alt=""/>
-                                        <div className="dentBox"></div>
-                                    </div>
-                                    <h4>Dr.William</h4>
-                                    <p>دندان پزشک</p>
-                                    <div className="dent-social">
-                                        <Button variant="contained" endIcon={<InfoIcon />}>
-                                            پروفایل کاربری
-                                        </Button>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="dentistSlide">
+                        <SwiperSlide className={"p-2"}>
+                            <div className="dentistSlide shadow-sm rounded-2 overflow-hidden">
                                 <div className="img">
                                     <img src={"/img/dentis1.jpg"} alt=""/>
                                     <div className="dentBox"></div>
                                 </div>
-                                <h4>Dr.William</h4>
+                                <h4>دکتر ابراهیمی</h4>
                                 <p>دندان پزشک</p>
                                 <div className="dent-social">
-                                    <Button variant="contained" endIcon={<InfoIcon />}>
+                                    <Button variant="contained" endIcon={<InfoIcon/>}>
                                         پروفایل کاربری
                                     </Button>
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="dentistSlide">
+                        <SwiperSlide className={"p-2"}>
+                            <div className="dentistSlide shadow-sm rounded-2 overflow-hidden">
                                 <div className="img">
                                     <img src={"/img/dentis1.jpg"} alt=""/>
                                     <div className="dentBox"></div>
                                 </div>
-                                <h4>Dr.William</h4>
+                                <h4>دکتر ابراهیمی</h4>
                                 <p>دندان پزشک</p>
                                 <div className="dent-social">
-                                    <Button variant="contained" endIcon={<InfoIcon />}>
+                                    <Button variant="contained" endIcon={<InfoIcon/>}>
                                         پروفایل کاربری
                                     </Button>
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="dentistSlide">
+                        <SwiperSlide className={"p-2"}>
+                            <div className="dentistSlide shadow-sm rounded-2 overflow-hidden">
                                 <div className="img">
                                     <img src={"/img/dentis1.jpg"} alt=""/>
                                     <div className="dentBox"></div>
                                 </div>
-                                <h4>Dr.William</h4>
+                                <h4>دکتر ابراهیمی</h4>
                                 <p>دندان پزشک</p>
                                 <div className="dent-social">
-                                    <Button variant="contained" endIcon={<InfoIcon />}>
+                                    <Button variant="contained" endIcon={<InfoIcon/>}>
                                         پروفایل کاربری
                                     </Button>
                                 </div>
                             </div>
                         </SwiperSlide>
-
+                        <SwiperSlide className={"p-2"}>
+                            <div className="dentistSlide shadow-sm rounded-2 overflow-hidden">
+                                <div className="img">
+                                    <img src={"/img/dentis1.jpg"} alt=""/>
+                                    <div className="dentBox"></div>
+                                </div>
+                                <h4>دکتر ابراهیمی</h4>
+                                <p>دندان پزشک</p>
+                                <div className="dent-social">
+                                    <Button variant="contained" endIcon={<InfoIcon/>}>
+                                        پروفایل کاربری
+                                    </Button>
+                                </div>
+                            </div>
+                        </SwiperSlide>
                     </Swiper>
                 </div>
                 <div className="dentistContent">

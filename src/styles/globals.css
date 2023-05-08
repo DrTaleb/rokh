@@ -18,7 +18,7 @@ body {
     position: relative;
 }
 
-* {
+html body {
     margin: 0;
     padding: 0;
     direction: rtl;
@@ -744,7 +744,6 @@ a {
 .dentistSlide {
     background-color: #FFFFFF;
     cursor: pointer;
-    box-shadow: 0 0 10px #d2d5d9;
 }
 
 .dentistSlide:hover .dentBox {
@@ -964,7 +963,9 @@ a {
 }
 
 #news .newsContainer .newsContent .newsSlide {
-    background-color: #eee;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+    overflow: hidden;
 }
 
 #news .newsContainer .newsContent .newsSlide .slideItems {
@@ -1048,7 +1049,7 @@ a {
 }
 
 #news .newsContainer .newsContent .newsSlide .slideItems .newsBtn button {
-    padding: 15px 30px;
+    padding: 10px 20px;
     border: none;
     background-color: #202c45;
     color: #fff;

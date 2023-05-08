@@ -7,6 +7,8 @@ export default function Smile() {
 
 
     return (
+        <>
+            <img className="wave-img w-100 bg-light" src={"img/Vector%20(1)%20(1).webp"} alt=""/>
         <section id="smile"  style={{
             background: `url(${bg.src})`,
             backgroundPosition: "center",
@@ -42,5 +44,6 @@ export default function Smile() {
                 </div>
             </div>
         </section>
+        </>
     )
 }
