@@ -9,7 +9,7 @@ export default function MainPageSlider({data}) {
                     <img src={item.image_url} className={"w-100"} alt="slider-img"/>
                 </Carousel.Item>) :
                 <Carousel.Item>
-                    <img src={"/img/slider2.jpg"} className={"w-100"} alt="slider-img"/>
+                    <img src={"/img/slider2.jpg"} className={"w-100 h50vh"} alt="slider-img"/>
                 </Carousel.Item>
             }
         </Carousel>

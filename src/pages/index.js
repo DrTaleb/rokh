@@ -8,7 +8,7 @@ import Features from "@/components/public/Features";
 import Smile from "@/components/public/smile/smile";
 import Department from "@/components/public/Department";
 import OurDentists from "@/components/public/OurDentists";
-import Contact from "@/components/public/contact/Contact";
+import Footer from "@/components/public/Footer/Footer";
 import Blogs from "@/components/public/Blogs";
 
 
@@ -24,15 +24,8 @@ export default function Home() {
       </Head>
       <main>
           <MainPageSlider data={[]}></MainPageSlider>
-          <InfoSection></InfoSection>
           <WeCare></WeCare>
           <Features></Features>
-          <Certifications data={[]}></Certifications>
-          <Smile></Smile>
-          <Department></Department>
-          <OurDentists></OurDentists>
-          {/*<Contact></Contact>*/}
-          <Blogs></Blogs>
       </main>
     </>
   )
